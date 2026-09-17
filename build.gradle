@@ -1,8 +1,8 @@
 plugins {
-    id 'org.springframework.boot' version '3.4.13'
+    id 'org.springframework.boot' version '3.5.16'
     id 'io.spring.dependency-management' version '1.1.7'
     id 'java'
-    id "com.netflix.dgs.codegen" version "8.1.1"
+    id "com.netflix.dgs.codegen" version "8.6.0"
     id "com.diffplug.spotless" version "6.25.0"
 }
 
@@ -37,7 +37,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-hateoas'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.5'
-    implementation 'com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter:10.1.2'
+    implementation 'com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter:10.6.0'
     implementation 'org.flywaydb:flyway-core'
     implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6',
