@@ -1,15 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '3.3.6'
-    id 'io.spring.dependency-management' version '1.1.6'
+    id 'org.springframework.boot' version '3.5.16'
+    id 'io.spring.dependency-management' version '1.1.7'
     id 'java'
-    id "com.netflix.dgs.codegen" version "7.0.3"
+    id "com.netflix.dgs.codegen" version "8.6.0"
     id "com.diffplug.spotless" version "6.25.0"
 }
 
 version = '0.0.1-SNAPSHOT'
-
-// DGS requires a newer graphql-java than the one managed by the Spring Boot BOM.
-ext['graphql-java.version'] = '22.3'
 
 java {
     toolchain {
@@ -39,8 +36,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-hateoas'
     implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
-    implementation 'com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter:9.2.2'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.5'
+    implementation 'com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter:10.6.0'
     implementation 'org.flywaydb:flyway-core'
     implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6',
@@ -57,7 +54,7 @@ dependencies {
     testImplementation 'io.rest-assured:spring-mock-mvc:5.5.0'
     testImplementation 'org.springframework.security:spring-security-test'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.4'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.5'
 }
 
 tasks.named('test') {
